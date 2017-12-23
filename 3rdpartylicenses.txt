@@ -70,3 +70,15 @@ THE SOFTWARE.
 @angular/core@5.1.2
 MIT
 MIT
+
+@angular/platform-browser@5.1.2
+MIT
+MIT
+
+@angular/router@5.1.2
+MIT
+MIT
+
+@angular/common@5.1.2
+MIT
+MIT
