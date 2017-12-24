@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { Observable } from 'rxjs/Observable';
 import {HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS} from '@angular/common/http';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
 const appRoutes: Routes = [
   {
     path: 'lazy',
@@ -20,6 +23,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

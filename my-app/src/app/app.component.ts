@@ -7,12 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private route: ActivatedRoute, private router: Router) {
-    route.queryParams.subscribe(p => {
-      if(p.redirect) {
-        router.navigate([`/${p.redirect}`]);
-      }
-    })
+  constructor() {
   }
+  
   title = 'app';
 }
